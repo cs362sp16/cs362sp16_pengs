@@ -1,0 +1,18 @@
+Refactor ducument for assignment 1
+
+1:Refactor adventure card
+Create a void function and put all necessary varaibles into it.
+
+2:Refactor council_room card
+Create a void function and put all necessary variables into it. 
+I levae discard function in original place because it is not part of the function of council_room.(My understanding)
+
+3:Refactor mine card
+SInce this card returns -1 and 0 so I create a int function and put all necessary variables in the parameter of the function.
+And then add a if else statement in the cardEffect function so it returns correct number
+
+4:Refactor card remodel
+similar to mine, this one returns a number. So I create a int function and put variables into it.
+And then add a if else statement in the cardEffect function so it returns correct number
+
+5:Refactor card smithy
