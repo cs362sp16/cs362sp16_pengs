@@ -1,0 +1,61 @@
+Starting game.
+The score is 1 
+Failed Assert: Bug is here, player 0 should have 3 score 
+
+GCOV After unittest1
+File 'dominion.c'
+Lines executed:17.72% of 570
+Creating 'dominion.c.gcov'
+
+Starting game.
+No bugs here for numHandCards ;)
+GCOV After unittest2
+File 'dominion.c'
+Lines executed:18.42% of 570
+Creating 'dominion.c.gcov'
+
+Starting game.
+No bugs for fullDeckCount 
+GCOV After unittest3
+File 'dominion.c'
+Lines executed:19.82% of 570
+Creating 'dominion.c.gcov'
+
+Starting game.
+No bugs for supplyCount 
+GCOV After unittest4
+File 'dominion.c'
+Lines executed:20.18% of 570
+Creating 'dominion.c.gcov'
+
+Starting game.
+No bugs for smithy 
+GCOV After cardtest1 
+File 'dominion.c'
+Lines executed:27.89% of 570
+Creating 'dominion.c.gcov'
+
+Starting game.
+No functional bugs for council_room 
+GCOV After cardtest2
+File 'dominion.c'
+Lines executed:29.82% of 570
+Creating 'dominion.c.gcov'
+
+Starting game.
+No functional bugs for village
+GCOV After cardtest3
+File 'dominion.c'
+Lines executed:30.53% of 570
+Creating 'dominion.c.gcov'
+
+Starting game.
+Failed Assert: Bargon got bugs, Can't trash it from hand
+
+Failed Assert: +4 coins function got bugs 
+
+GCOV After cardtest4
+File 'dominion.c'
+Lines executed:35.26% of 570
+Creating 'dominion.c.gcov'
+

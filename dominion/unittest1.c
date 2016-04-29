@@ -1,6 +1,5 @@
 #include "dominion.h"
 #include <stdio.h>
-
 int myassert(int element, char* msg){
 	if(element == 1 ){
 		printf("Failed Assert: %s\n", msg);
@@ -28,7 +27,7 @@ int main(){
 	if (result == -1)
 		return 0;
 	else if (result == 0)
-		printf("No bugs for fullDeckCount \n");
+		printf("No bugs for scoreFor");
 	return 0;
 }
 

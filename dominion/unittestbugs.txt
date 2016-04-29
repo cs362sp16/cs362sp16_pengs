@@ -1,0 +1,5 @@
+I have test function numHandCards, fullDeckCount, and supplyCount. They don¡¯t have bugs for their function. 
+I found bugs in scoreFor function, it can present the score of user correctly. After each game initialized, there should have 3 estates, and that¡¯s mean we should have 3 score, but scoreFor only show 1 score here.
+
+I have test smithy, village, and council_room. They don¡¯t have any bugs.
+I found bugs in Baron, after I use baron, I can¡¯t throw it out of my hand, baron defends on my hand, and if i choose to discard estate, I can get +4 coins too. I also can¡¯t get one more estate if I don¡¯t discard estate.

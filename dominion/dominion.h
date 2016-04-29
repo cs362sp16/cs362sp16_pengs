@@ -20,34 +20,29 @@ enum CARD
    estate,
    duchy,
    province,
-
    copper,
    silver,
    gold,
-
-   adventurer,
-   /* If no/only 1 treasure found, stop when full deck seen */
+   adventurer,  /* If no/only 1 treasure found, stop when full deck seen */
    council_room,
-   feast, /* choice1 is supply # of card gained) */
+   feast,       /* choice1 is supply # of card gained) */
    gardens,
-   mine, /* choice1 is hand# of money to trash, choice2 is supply# of
-	    money to put in hand */
-   remodel, /* choice1 is hand# of card to remodel, choice2 is supply# */
+   mine,        /* choice1 is hand# of money to trash, choice2 is supply# of
+                 money to put in hand */
+   remodel,     /* choice1 is hand# of card to remodel, choice2 is supply# */
    smithy,
    village,
-
-   baron, /* choice1: boolean for discard of estate */
-   /* Discard is always of first (lowest index) estate */
+   baron,       /* choice1: boolean for discard of estate */
+                /* Discard is always of first (lowest index) estate */
    great_hall,
-   minion, /* choice1:  1 = +2 coin, 2 = redraw */
-   steward, /* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */
+   minion,      /* choice1:  1 = +2 coin, 2 = redraw */
+   steward,     /* choice1: 1 = +2 card, 2 = +2 coin, 3 = trash 2 (choice2,3) */
    tribute,
-
-   ambassador, /* choice1 = hand#, choice2 = number to return to supply */
+   ambassador,  /* choice1 = hand#, choice2 = number to return to supply */
    cutpurse,
-   embargo, /* choice1 = supply# */
+   embargo,     /* choice1 = supply# */
    outpost,
-   salvager, /* choice1 = hand# to trash */
+   salvager,    /* choice1 = hand# to trash */
    sea_hag,
    treasure_map
   };
@@ -104,7 +99,7 @@ int numHandCards(struct gameState *state);
 /* How many cards current player has in hand */
 
 int handCard(int handNum, struct gameState *state);
-/* enum value of indexed card in player's hand */
+/* enum value of indexed card in player's hand */›
 
 int supplyCount(int card, struct gameState *state);
 /* How many of given card are left in supply */

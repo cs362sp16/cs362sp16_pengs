@@ -1,0 +1,9 @@
+First,I check the API in dominion, and try to understand each function.I also check the structure, make sure I know what it is.
+
+Next I pick some basic function in dominion.c, and after I understand what the author means, and I write a code to test them. I used printf to make sure 
+each step is what I expect.
+
+I test card effect by printHand and printState in each step, and I go to the website of dominion to check the card effect is correct or not.
+so far, I got some bugs in this system.
+
+There is 35.26% of coverage of my unit test, because I test some short function in this system. Maybe I need check some large function to make sure I cover everything in this system.
