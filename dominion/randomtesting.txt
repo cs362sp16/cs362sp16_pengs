@@ -1,14 +1,13 @@
 randomtesting.txt 
-
 1) Create file to test the cardEffect in dominion.c
 2) For random test, I use the random function which is library from C.
-3) I check the number of the deck, the number of the hand, and also the number of the buy, to make sure everything is correct. I print those value on screen, make sure it¡¯s correct behavior.
+3) I check the number of the deck, the number of the hand, and also the number of the buy, to make sure everything is correct. I print those value on screen, make sure itÂ¡Â¯s correct behavior.
 
-For adventurer card: I found the number of hand is not correct, there is bug for adventurer card, but the it get treasure card from the deck, so that¡¯s part of function correct.After I check the value, it¡¯s like that adventurer after used is still in our hands, we can¡¯t kick it off :(
+For adventurer card: I found the number of hand is not correct, there is bug for adventurer card, but the it get treasure card from the deck, so thatÂ¡Â¯s part of function correct.After I check the value, itÂ¡Â¯s like that adventurer after used is still in our hands, we canÂ¡Â¯t kick it off :(
 
-For the smithy card: No bugs, I check the number of hand, and the number of deck. It¡¯s completely correct. 
+For the smithy card: No bugs, I check the number of hand, and the number of deck. ItÂ¡Â¯s completely correct. 
 
-For the council room card: Also no bugs, check the number of hand, and also check the buy. It¡¯s correct.
+For the council room card: Also no bugs, check the number of hand, and also check the buy. ItÂ¡Â¯s correct.
 
 All of those function test is 100% cover.
 And system run it immediately. 
@@ -32,5 +31,5 @@ And system run it immediately.
  Calls executed:100.00% of 2
 
 
-After I compare my unit test and random test, the unit test is slightly higher than random test coverage. However I think that the random test is the  good way to find the bugs, because it¡¯s random, and it can find the unique or odd bugs. The unit test have higher code coverage, this help us to find the command bugs that we usually did.
+After I compare my unit test and random test, the unit test is slightly higher than random test coverage. However I think that the random test is the  good way to find the bugs, because itÂ¡Â¯s random, and it can find the unique or odd bugs. The unit test have higher code coverage, this help us to find the command bugs that we usually did.
 Both of them have advantage and disadvantage, choose the right test in right time is the right things.
