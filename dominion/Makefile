@@ -53,7 +53,28 @@ unittestresults.out: unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2
 		echo "GCOV After cardtest4" >> unittestresults.out
 		gcov dominion.c >> unittestresults.out
 
-all: playdom player cardtest unittest unittestresults.out
+randomtest:
+	gcc -o randomtestadventurer randomtestadventurer.c -g dominion.o rngs.o interface.o $(CFLAGS)
+	gcc -o randomtestcard1 randomtestcard1.c -g dominion.o rngs.o interface.o $(CFLAGS)
+	gcc -o randomtestcard2 randomtestcard2.c -g dominion.o rngs.o interface.o $(CFLAGS)
+
+randomtestresults:
+	./randomtestcard1 42 
+	echo "GCOV AFTER RANDOMTEST CARD1" >> randomtestcard1.out
+	gcov -fb dominion.c >> randomtestcard1.out 
+	make clean
+	make all
+	./randomtestcard2 42
+	echo "GCOV AFTER RANDOMTEST CARD2" >> randomtestcard2.out
+	gcov -fb dominion.c >> randomtestcard2.out
+	make clean
+	make all
+	./randomtestadventurer 42
+	echo "GCOV AFTER RANDOM ADVENTURER" >> randomtestadventurer.out
+	gcov -fb dominion.c >> randomtestadventurer.out 
+
+
+all: playdom player randomtest 
 
 clean:
-	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM
+	rm -f *.o playdom.exe playdom test.exe test player unittest1 unittest2 unittest3 unittest4 cardtest1 cardtest2 cardtest3 cardtest4 player.exe testInit testInit.exe *.gcov *.gcda *.gcno *.so *.a *.dSYM randomtestadventurer randomtestcard1 randomtestcard2

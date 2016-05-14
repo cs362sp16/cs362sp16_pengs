@@ -99,7 +99,7 @@ int numHandCards(struct gameState *state);
 /* How many cards current player has in hand */
 
 int handCard(int handNum, struct gameState *state);
-/* enum value of indexed card in player's hand */›
+/* enum value of indexed card in player's hand */
 
 int supplyCount(int card, struct gameState *state);
 /* How many of given card are left in supply */

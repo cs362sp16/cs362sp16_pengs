@@ -1307,7 +1307,7 @@ int cardRemodel(struct gameState *state, int currentPlayer, int i, int j, int ch
    //discard trashed card
    for (i = 0; i < state->handCount[currentPlayer]; i++)
    {
-      if (state->hand[currentPlayer][i] = j)
+      if (state->hand[currentPlayer][i] == j)
       {
 	 discardCard(i, currentPlayer, state, 0);
 	 break;
@@ -1318,7 +1318,7 @@ int cardRemodel(struct gameState *state, int currentPlayer, int i, int j, int ch
 
 void cardSmithy(struct gameState *state, int currentPlayer, int i, int handPos){
    //+3 Cards
-   for (i; i < 3; i++)
+   for (i=0; i < 3; i++)
    {
       drawCard(currentPlayer, state);
    }
