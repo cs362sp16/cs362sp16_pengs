@@ -2,7 +2,7 @@ randomtesting.txt
 
 1) Create file to test the cardEffect in dominion.c
 2) For random test, I use the random function which is library from C.
-3) I check the number of the deck, the number of the hand, and also the number of the buy, to make sure everything is correct. 
+3) I check the number of the deck, the number of the hand, and also the number of the buy, to make sure everything is correct. I print those value on screen, make sure it¡¯s correct behavior.
 
 For adventurer card: I found the number of hand is not correct, there is bug for adventurer card, but the it get treasure card from the deck, so that¡¯s part of function correct.After I check the value, it¡¯s like that adventurer after used is still in our hands, we can¡¯t kick it off :(
 
