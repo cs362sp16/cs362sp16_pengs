@@ -1,0 +1,117 @@
+Player0 Bought silver
+Player1 Bought silver
+Player2 Bought copper
+
+Player0 Bought silver
+Player1 Bought silver
+Player2 Bought silver
+
+Player0 Bought silver
+Player1 Bought silver
+Player2 Bought silver
+
+Player0 Bought ambassador
+Player1 Bought silver
+Player2 Bought silver
+
+Player0 Bought minion
+Player1 Bought salvager
+Player2 Bought silver
+
+Player0 Bought silver
+Player1 Bought copper
+Player2 Bought silver
+
+Play action -------> who(0) plays: ambassador
+Player0 Bought silver
+Player1 Bought province 
+Player2 Bought silver
+
+Play action -------> who(0) plays: minion
+Player0 Bought embargo
+Player1 Bought silver
+Player2 Bought outpost
+
+Player0 Bought silver
+Play action -------> who(1) plays: salvager
+Player1 Bought silver
+Player2 Bought remodel
+
+Play action -------> who(0) plays: embargo
+Player0 Bought silver
+Player1 Bought silver
+Play action -------> who(2) plays: remodel
+Player2 Bought silver
+
+Player0 Bought province 
+Player1 Bought cutpurse
+Player2 Bought tribute
+
+Player0 Bought silver
+Player1 Bought gardens
+Player2 Bought baron
+
+Player0 Bought silver
+Player1 Bought silver
+Play action -------> who(2) plays: outpost
+Player2 Bought silver
+
+Player0 Bought province 
+Player1 Bought silver
+
+Player0 Bought silver
+Play action -------> who(1) plays: gardens
+Player1 Bought silver
+Play action -------> who(2) plays: baron
+
+
+Player0 Bought province 
+Play action -------> who(2) plays: tribute
+Player2 Bought silver
+
+Player2 Bought province 
+
+Player0 Bought silver
+Player1 Bought silver
+Player2 Bought silver
+
+Play action -------> who(1) plays: cutpurse
+Player1 Bought silver
+Player2 Bought silver
+
+Player1 Bought silver
+
+Player1 Bought silver
+Player2 Bought silver
+
+Player0 Bought province 
+Player1 Bought province 
+Player2 Bought silver
+
+Player0 Bought silver
+
+Player0 Bought silver
+Player1 Bought province 
+
+
+Player0 Bought silver
+
+Player0 Bought province 
+Player1 Bought province 
+Player2 Bought province 
+
+Player0 Bought silver
+Player1 Bought province 
+
+
+The result is:
+Player0:
+Score: 6
+
+Player1:
+WINNER!
+Score: 33
+
+Player2:
+Score: 17
+

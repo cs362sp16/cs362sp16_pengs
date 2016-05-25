@@ -24,43 +24,43 @@ int main (int argc, char** argv) {
 
   while (!isGameOver(p)) {
     money = 0;
-	smithyPos = -1;
+    smithyPos = -1;
     adventurerPos = -1;
     for (i = 0; i < numHandCards(p); i++) {
-		if (handCard(i, p) == copper)
-    		money++;
+      if (handCard(i, p) == copper)
+    money++;
       else if (handCard(i, p) == silver)
-    		money += 2;
+    money += 2;
       else if (handCard(i, p) == gold)
-		    money += 3;
+    money += 3;
       else if (handCard(i, p) == smithy)
-		    smithyPos = i;
+    smithyPos = i;
       else if (handCard(i, p) == adventurer)
-		    adventurerPos = i;
+    adventurerPos = i;
     }
 
     if (whoseTurn(p) == 0) {
       if (smithyPos != -1) {
         printf("0: smithy played from position %d\n", smithyPos); 
-		playCard(smithyPos, -1, -1, -1, p); 
-		printf("smithy played.\n");
-		money = 0;
-		i=0;
-		while(i<numHandCards(p)){
-		  if (handCard(i, p) == copper){
-		    playCard(i, -1, -1, -1, p);
-		    money++;
-		  }
-		  else if (handCard(i, p) == silver){
-		    playCard(i, -1, -1, -1, p);
-		    money += 2;
-		  }
-		  else if (handCard(i, p) == gold){
-		    playCard(i, -1, -1, -1, p);
-		    money += 3;
-		  }
-		  i++;
-		}
+	playCard(smithyPos, -1, -1, -1, p); 
+	printf("smithy played.\n");
+	money = 0;
+	i=0;
+	while(i<numHandCards(p)){
+	  if (handCard(i, p) == copper){
+	    playCard(i, -1, -1, -1, p);
+	    money++;
+	  }
+	  else if (handCard(i, p) == silver){
+	    playCard(i, -1, -1, -1, p);
+	    money += 2;
+	  }
+	  else if (handCard(i, p) == gold){
+	    playCard(i, -1, -1, -1, p);
+	    money += 3;
+	  }
+	  i++;
+	}
       }
 
       if (money >= 8) {
@@ -87,24 +87,24 @@ int main (int argc, char** argv) {
     else {
       if (adventurerPos != -1) {
         printf("1: adventurer played from position %d\n", adventurerPos);
-		playCard(adventurerPos, -1, -1, -1, p); 
-		money = 0;
-		i=0;
-		while(i<numHandCards(p)){
-		  if (handCard(i, p) == copper){
-		    playCard(i, -1, -1, -1, p);
-		    money++;         
-		  }
-	  	else if (handCard(i, p) == silver){
-	   	    playCard(i, -1, -1, -1, p);
-	   	 	money += 2;
-	 	 }
-	  	else if (handCard(i, p) == gold){
-	  	  playCard(i, -1, -1, -1, p);
-	   	  money += 3;
-	  	 }
-	  	i++;
-		}
+	playCard(adventurerPos, -1, -1, -1, p); 
+	money = 0;
+	i=0;
+	while(i<numHandCards(p)){
+	  if (handCard(i, p) == copper){
+	    playCard(i, -1, -1, -1, p);
+	    money++;         
+	  }
+	  else if (handCard(i, p) == silver){
+	    playCard(i, -1, -1, -1, p);
+	    money += 2;
+	  }
+	  else if (handCard(i, p) == gold){
+	    playCard(i, -1, -1, -1, p);
+	    money += 3;
+	  }
+	  i++;
+	}
       }
 
       if (money >= 8) {
@@ -113,8 +113,8 @@ int main (int argc, char** argv) {
       }
       else if ((money >= 6) && (numAdventurers < 2)) {
         printf("1: bought adventurer\n");
-		buyCard(adventurer, p);
-		numAdventurers++;
+	buyCard(adventurer, p);
+	numAdventurers++;
       }else if (money >= 6){
         printf("1: bought gold\n");
 	    buyCard(gold, p);
