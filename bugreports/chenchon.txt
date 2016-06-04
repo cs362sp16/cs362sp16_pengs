@@ -1,0 +1,5 @@
+I take chen¡¯s cardTest, and I find bugs in feast part in dominion.c
+
+in whole case feast, author backup hand and buy new card, after he finish buy action, he reset hand from backup, so it¡¯s like he overwrite what he did before. The buy action and trash card is not work.
+
+This is logical bugs.

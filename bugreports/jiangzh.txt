@@ -1,0 +1,8 @@
+I take jiangzh¡¯s cardTest, it test about council_room_function. 
+
+at line 1285 to 1286
+for(i = 0; i<3; i++){
+	drawCard(currentPlayer,state);
+}
+
+i in there should be <4, not <3, because council_room draw 4 card not 3 card.

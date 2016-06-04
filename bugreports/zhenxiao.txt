@@ -1,0 +1,10 @@
+I take Zhenxiao¡¯s cardTest, and the exist a bug in fvillage function in dominion.c
+
+after use card, the action only add 1, but it should add 2 action for user.
+
+so I check the debug the code
+
+at line 89:
+state->numActions = state->numActions + 1;
+
+so, there should be +2 not +1.

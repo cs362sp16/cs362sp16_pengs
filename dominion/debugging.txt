@@ -1,0 +1,56 @@
+I decide to take GUI debugger for debug, so I put my file in xCode, and take bug from my previous unittest bug report.
+
+I will test scoreFor function.
+
+First, I set break point in my unittest1.c in line 17. It¨s after initializeGame. I check the memory, so I can see all information after initializeGame.
+
+！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+Here is logs:
+
+after initializeGame For player1:
+hand: 1 estate, 4 copper.
+handCount: 5
+deck: 3 estate, 7 copper. ( It¨s like deck card is not disappear after it from deck to hand)
+deckCount: 5
+discard: null
+discardCount: 0
+playedCard: 0
+score: 0
+
+after first loop in scorefFor function:
+score become 1, because it¨s search for estate.
+work is correct
+
+the second loops, discardCount is 0, so not running.
+
+However the third loops, author said that it¨s search for deck, but loops var is discardCount in line 444. Bug is here. If it¨s i< discardCount, scoreFor function will never search deck score in first round, because discardCount is 0 in first round.
+
+So I decide to change this var to deckCount.
+
+change line 444
+for (i = 0; i < state->discardCount[player]; i++)
+to 
+for (i = 0; i < state->deckCount[player]; i++)
+
+And then I run the test again. scoreFor return correct score.
+
+Although deck card is not disappear after it¨s from deck to hand, deck count is 5 after initializeGame, and author take card from Array 5 to 9 to hand, So he avoid this bugs here. I think that it¨s acceptable, because we don¨t want deck card is gone.
+
+Debug work is done. Fixed this bug.
+=============================================================================
+Agans¨ principles:
+
+Rule #1 ＾understand the system￣
+   I read the dominon.h file first for understand this dominion system.
+   Read the notes in code, to know what each function do.
+   So this what the base of the test.
+Rule #2 ＾Make if Fail￣
+   I write unitTest to make it fail.
+   This is the first step to do test. ;)
+Rule #5 ＾Change One Thing at a Time￣
+   I found problem is here, so I only change one var. This make sure that no       other problem is combine with this problem.
+
+
+
+
+
