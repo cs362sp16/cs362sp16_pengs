@@ -15,7 +15,6 @@ int main(){
 	struct gameState G;
 	struct gameState *p = &G;
 	int k[10] ={smithy,council_room,gardens,embargo,cutpurse,mine,ambassador,outpost,baron,tribute};
-	printf ("Starting game.\n");
 	initializeGame(2,k,3,p);
 	p->hand[0][1] = council_room;
 	playCard(1,0,0,0,p);

@@ -1,3 +1,5 @@
+bug fixed file is dominion_bugfixed_version. Not the normal dominion.c
+
 I decide to take GUI debugger for debug, so I put my file in xCode, and take bug from my previous unittest bug report.
 
 I will test scoreFor function.
@@ -37,12 +39,55 @@ And then I run the test again. scoreFor return correct score.
 Although deck card is not disappear after it¡¯s from deck to hand, deck count is 5 after initializeGame, and author take card from Array 5 to 9 to hand, So he avoid this bugs here. I think that it¡¯s acceptable, because we don¡¯t want deck card is gone.
 
 Debug work is done. Fixed this bug.
+
 =============================================================================
+
+Baron is bug, from my classmate report, so I am debug this things
+
+Here is logs:
+
+
+after initializeGame and set up hand card :
+hand: 2 estate, 2 baron, 1 copper
+handCount: 5
+numBuys: 1
+coins: 3
+numAction: 2
+
+
+after jump into baron cardEffect part :
+I found bugs in line 796:
+gainCard(estate, state, 0, currentPlayer);//Gain an estate
+
+jump into gainCard function, it should get estate card in hand, but he add it to discard function. because to flag is 0, but it should be 2
+
+I fix this bug by change parameter in this gainCard function
+change to gainCard(estate, state, 2, currentPlayer);//Gain an estate
+
+back to baron cardEffect, line 769, author repeat decrease supplyCount, gainCard function have decreased supplyCount already, so I will delete this line for avoid repeat decrease supplyCount.
+
+after first playCard:
+hand: 2 baron, 3 estate, 1 copper
+handCount: 6
+coins: 3
+
+And author still not delete baron from hands, that¡¯s problem. Fix bug by add delete hand card in baron cardEffect part.
+Add line 757: discardCard(handPos, currentPlayer, state, 0);
+
+And coin part, because author have update coin in playHand function, it always reset coin by searing copper, sliver, gold. It overwrite what the cardEffect, so I delete that line(line 267) in playHand function for avoid coin part bugs.
+
+
+Debug work is done. Fixed this bug.
+
+
+=============================================================================
+
 Agans¡¯ principles:
 
 Rule #1 ¡°understand the system¡±
    I read the dominon.h file first for understand this dominion system.
    Read the notes in code, to know what each function do.
+   Go to dominion strategy website, understand what rule of test card.
    So this what the base of the test.
 Rule #2 ¡°Make if Fail¡±
    I write unitTest to make it fail.

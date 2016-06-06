@@ -264,7 +264,7 @@ int playCard(int handPos, int choice1, int choice2, int choice3, struct gameStat
    state->numActions--;
 
    //update coins (Treasure cards may be added with card draws)
-   updateCoins(state->whoseTurn, state, coin_bonus);
+   //updateCoins(state->whoseTurn, state, coin_bonus);
 
    return 0;
 }
@@ -441,7 +441,7 @@ int scoreFor (int player, struct gameState *state) {
    }
 
    //score from deck
-   for (i = 0; i < state->discardCount[player]; i++)
+   for (i = 0; i < state->deckCount[player]; i++)
    {
       if (state->deck[player][i] == curse) { score = score - 1; };
       if (state->deck[player][i] == estate) { score = score + 1; };
@@ -755,6 +755,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
     case baron:
            state->numBuys++;//Increase buys by 1!
+           discardCard(handPos, currentPlayer, state, 0);
            if (choice1 > 0){//Boolean true or going to discard an estate
                int p = 0;//Iterator for hand!
                int card_not_discarded = 1;//Flag for discard set!
@@ -792,8 +793,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
 
            else{
                if (supplyCount(estate, state) > 0){
-                   gainCard(estate, state, 0, currentPlayer);//Gain an estate
-                   state->supplyCount[estate]--;//Decrement Estates
+                   gainCard(estate, state, 2, currentPlayer);//Gain an estate
                    if (supplyCount(estate, state) == 0){
                        isGameOver(state);
                    }
@@ -1070,8 +1070,7 @@ int cardEffect(int card, int choice1, int choice2, int choice3, struct gameState
       case sea_hag:
 	 for (i = 0; i < state->numPlayers; i++){
 	    if (i != currentPlayer){
-	       state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];			   
-		   state->deckCount[i]--;
+	       state->discard[i][state->discardCount[i]] = state->deck[i][state->deckCount[i]--];			    state->deckCount[i]--;
 	       state->discardCount[i]++;
 	       state->deck[i][state->deckCount[i]--] = curse;//Top card now a curse
 	    }

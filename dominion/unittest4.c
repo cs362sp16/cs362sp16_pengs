@@ -3,7 +3,7 @@
 
 int myassert(int element, char* msg){
 	if(element == 1 ){
-		printf("warning: %s\n", msg);
+		printf("Failed: %s\n", msg);
 		return -1;
 	}
 	return 0;
@@ -14,8 +14,6 @@ int main(){
 	struct gameState *p =&G;
 	int result=0;
 	int k[10] ={smithy,adventurer,gardens,embargo,cutpurse,mine,ambassador,outpost,baron,tribute};
-	printf ("Starting game.\n");
-
 	initializeGame(2,k,2,p);
 	/*first test*/
 	int supply = supplyCount(smithy,p);
