@@ -1,0 +1,10 @@
+I implement tarantula.py for tarantula test.
+
+First I using subprocess to make clean and make all, and then I make test suit which contain all of my unitTest and cardTest. Running each test, and then catch the results by python subprocess.check_output function. using python startswith function to catch the first chart of string. So I get totalPass and totalFail part.
+
+And then I using file I/O string to deal with gcov file. Mark the run times of each line in each file, so I have passed line and failed line.
+
+and I compute result by standard tarantula equation. So I can set up the print color to see what result is. 0 means safe, and color is green. Less than 0.5 means maybe, and color is yellow. Greater than 0.5 means bugs, and color is red.
+
+after I fishes my tarantula test, some interesting thing is here. Some part of code maybe not really bugs, but still suspiciousness. I guess that because  The coverage of my unitTest and cardTest is not really high, it cause some line is suspiciousness, but I still find bugs in correct place, for example, scroeFor function, and baron cardEffect.
+

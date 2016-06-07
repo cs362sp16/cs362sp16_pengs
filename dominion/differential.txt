@@ -1,3 +1,3 @@
 I have test 8 different dominion implementation with several seed, I didn¡¯t found any fault in diff tools. Because all of them is same, I don¡¯t know who is correct or not. I think that his is not an ideal case for differential test, because all of dominion implementation is almost same
 
-My random dominion tester run over 20 times, and obtain over 60% courage of dominion.c
+My random dominion tester run over 20 times, and obtain over 60% coverage of dominion.c
